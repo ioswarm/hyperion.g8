@@ -24,5 +24,5 @@ lazy val lib = new {
     val hyperion = "0.2.1"
   }
 
-  val hyperion = "de.ioswarm" %% "hyperion" % Version.hyperion
+  val hyperion = "de.ioswarm" %% "hyperion-core" % Version.hyperion
 }
