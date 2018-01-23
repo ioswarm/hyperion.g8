@@ -1,7 +1,7 @@
 lazy val settings = Seq(
-  name := "$name$"
-  , organization := "$organization$"
-  , version := "$version$"
+  name := "example"
+  , organization := "com.example"
+  , version := "0.1.0.SNAPSHOT"
   , scalaVersion := "2.12.4"
   , scalacOptions ++= Seq(
     "-language:_"
@@ -14,7 +14,8 @@ lazy val settings = Seq(
 lazy val root = project.in(file("."))
   .settings(settings)
   .settings(
-    libraryDependencies ++= Seq(
+    mainClass in assembly := Some("Main")
+    ,libraryDependencies ++= Seq(
       lib.hyperion
     )
   )
