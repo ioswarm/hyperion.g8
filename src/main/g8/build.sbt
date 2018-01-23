@@ -1,7 +1,7 @@
 lazy val settings = Seq(
-  name := "example"
-  , organization := "com.example"
-  , version := "0.1.0.SNAPSHOT"
+  name := "$name$"
+  , organization := "$organization$"
+  , version := "$version$"
   , scalaVersion := "2.12.4"
   , scalacOptions ++= Seq(
     "-language:_"

@@ -10,7 +10,7 @@ object Main extends App {
 
   System.setProperty("java.library.path", "./target/native")
 
-  val hy = Hyperion("example")
+  val hy = Hyperion("$name$")
 
   hy.start("example" receive { ctx => {
     case s: String => ctx.sender() ! s.toUpperCase()
@@ -21,7 +21,7 @@ object Main extends App {
 
     implicit val timeout: Timeout = Timeout(1.second)
 
-    pathPrefix("example" / Segment) { s =>
+    pathPrefix("$name$" / Segment) { s =>
       get {
         onSuccess(ref ? s) {
           case s: String => complete(s)
